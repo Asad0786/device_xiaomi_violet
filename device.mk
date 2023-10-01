@@ -18,7 +18,7 @@ $(call inherit-product, vendor/xiaomi/violet/violet-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe
+    $(LOCAL_PATH)/overlay-aosp
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -149,10 +149,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Display/Graphics
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
@@ -196,9 +192,6 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     vendor.qti.hardware.fm@1.0:64 \
     vendor.qti.hardware.fm@1.0.vendor:64
-
-# Firmware
-$(call inherit-product, vendor/xiaomi-firmware/violet/firmware.mk)
 
 # Framework detect
 PRODUCT_PACKAGES += \

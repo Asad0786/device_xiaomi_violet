@@ -8,15 +8,13 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common Pixel Experience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ProtonPlus stuff.
+$(call inherit-product, vendor/proton/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_USES_AOSP_RECOVERY := true
-TARGET_SUPPORTS_QUICK_TAP := true
-IS_PHONE := true
+PROTON_BUILD_VARIANT := OFFICIAL
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_violet
+PRODUCT_NAME := violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
